@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+    padding: 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #000;
+    z-index: 1000;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    padding: 10px;
+}
+.logo {
+    margin-left: 30px;
+}
+.btn-acao {
+    margin-right: 40px;
+}
+.btn-acao ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.btn-acao a{
+    color: white;
+    text-decoration: none;
+}
+.btn-acao ul li a i{
+    background-color: rgb(71, 70, 70);
+    padding: 15px;
+}
+
+#Home{
+    background-image: url(img/banner.jpg);
+     background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.boas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    color: white;
+    margin-left: 40px;
+}
+
+.b-titulo{
+    font-size: 30px;
+}
+
+.b-frase{
+    font-size: 25px;
+}
+
+.b-btn{
+    margin-top: 10px;
+}
+.btn-avaliacao{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px 10px 20px;
+    border: solid 1px white;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-avaliacao:hover{
+   background-color: transparent;
+   color:rgb(255, 255, 255);
+   cursor: pointer; 
+}
+
+
+#Menu{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#Menu::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image: url(img/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    filter: grayscale(100%);
+    z-index:-1;
+}
+.ilustracao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.ilustracao .i {
+    width: 40%;
+    height: 500px;
+    gap: 15px;
+    margin: 10px;
+    margin-top: 72px;
+    border-radius: 10px;
+    border: solid 1px rgb(255, 255, 255);
+    overflow: hidden;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+.ilustracao .i:hover{
+   color:rgb(35, 175, 194);
+   cursor: pointer;
+   filter: unset;
+}
+.ilustracao .i img{
+    height: 500px;
+}
