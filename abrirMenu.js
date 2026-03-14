@@ -15,12 +15,12 @@ overlay.addEventListener("click", () => {
 });
 
 
-
 const imagens = document.querySelectorAll(".ilustracao .i");
 const container = document.querySelector(".ilustracao");
 
 let index = 0;
 let intervalo;
+let pausado = false;
 
 
 function trocarImagem(){
@@ -41,7 +41,9 @@ function trocarImagem(){
 
 
 function iniciarCarrossel(){
-    intervalo = setInterval(trocarImagem,1000);
+    if (!pausado) { 
+        intervalo = setInterval(trocarImagem,1000);
+    }
 }
 
 
@@ -50,11 +52,20 @@ function pararCarrossel(){
 }
 
 
-trocarImagem();
-iniciarCarrossel();
+trocarImagem(); 
+// iniciarCarrossel();
 
 
 container.addEventListener("mouseenter", pararCarrossel);
 
 
 container.addEventListener("mouseleave", iniciarCarrossel);
+
+// Parallax effect
+const parallaxBg = document.querySelector('.parallax-bg');
+
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * -0.5; // Ajuste a velocidade do parallax
+    parallaxBg.style.transform = `translateY(${rate}px)`;
+});
